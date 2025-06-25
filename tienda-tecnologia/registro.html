@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/usuarios.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2><i class="fa-solid fa-user-plus"></i> Registro de Cliente</h2>
+    <form id="formRegistro" action="php/registrar.php" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="password" name="contraseña" id="clave" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+      <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+    </form>
+  </div>
+
+  <script>
+  const clave = document.getElementById("clave");
+
+  // Mostrar error si se pasó ?error=1 en la URL
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("error") === "1") {
+    clave.setCustomValidity("La contraseña debe tener al menos 4 caracteres.");
+    clave.reportValidity(); // Muestra el mensaje
+  }
+
+  // Limpiar el mensaje de error cuando el usuario vuelve a escribir
+  clave.addEventListener("input", function () {
+    if (clave.value.length >= 4) {
+      clave.setCustomValidity("");
+    }
+  });
+</script>
+
+
+</body>
+</html>
