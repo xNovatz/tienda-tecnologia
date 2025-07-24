@@ -1,0 +1,133 @@
+/* Este CSS es utilizado en: gabinetes.php, graphic.php, laptops.php, monitores.php, mouse.php, procesadores.php, rams.php */
+/* Estilo base y tipografía */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Modal general */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #333;
+}
+
+/* Título */
+.modal-contenido h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Etiquetas */
+.modal-contenido form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+/* Campos de entrada */
+.modal-contenido form input[type="text"],
+.modal-contenido form input[type="number"],
+.modal-contenido form input[type="file"],
+.modal-contenido form select,
+.modal-contenido form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-contenido form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Botón enviar */
+.modal-contenido form button[type="submit"] {
+  margin-top: 25px;
+  background-color: #018658;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido form button[type="submit"]:hover {
+  background-color: #006341;
+}
+
+/* Mensaje de éxito o error */
+.mensaje {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #018658;
+}
+
+/* Botón fuera del modal */
+.btn-agregar-producto {
+  background-color: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* ---------------------------------- */
+/* Precios del producto */
+/* ---------------------------------- */
+.tachado {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 10px;
+}
+.oferta {
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,236 @@
+/* Este CSS es utilizado en: index.php, gabinetes.php, graphic.php, laptops.php, mi-cuenta.php, monitores.php, mouse.php, procesadores.php, rams.php */
+.carrito-contenedor {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 380px;
+  height: 100%;
+  background: #fff;
+  border-left: 3px solid #03a678;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.carrito-contenedor.activo {
+  right: 0;
+}
+
+.carrito-lista-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  margin: 18px 0;
+  min-height: 0;
+}
+
+.carrito-contenedor ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.item-carrito {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-carrito .info-producto.horizontal {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.item-carrito .info-producto.horizontal img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.detalles-producto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detalles-producto .nombre {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.detalles-producto .precios {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.tachado {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 15px;
+  margin-right: 6px;
+}
+
+.precios .actual {
+  font-weight: bold;
+  color: #01966c;
+  font-size: 16px;
+}
+
+.detalles-producto .controles-cantidad {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background-color: transparent;
+  color: #000;
+  font-size: 14px;
+  margin-top: 6px;
+  max-width: 90px;
+  width: fit-content;
+}
+
+.detalles-producto .controles-cantidad button {
+  background: transparent;
+  color: #000;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.detalles-producto .controles-cantidad span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.detalles-producto .subtotal {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* Footer fijo al fondo */
+.carrito-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  background-color: #fff;
+  margin-top: auto;
+}
+
+.carrito-footer p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#vaciar-carrito {
+  background: #e74c3c;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 12px;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+#vaciar-carrito:hover {
+  background-color: #c0392b;
+}
+
+.btn-pagar {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-pagar:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 480px) {
+  .carrito-contenedor {
+    width: 100%;
+  }
+}
+
+.fondo-oscuro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1500;
+  display: none;
+}
+
+.fondo-oscuro.activo {
+  display: block;
+}
+
+.boton-eliminar {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.boton-eliminar:hover {
+  color: #c0392b;
+}
+
+.boton-eliminar i {
+  pointer-events: none;
+}
+
+
+
+.btn-pagar {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-pagar:hover {
+  background-color: #0056b3;
+}

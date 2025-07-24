@@ -1,0 +1,181 @@
+/* Contenedor general */
+.cuenta-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Título principal */
+.cuenta-container h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Buscador */
+.buscar-usuarios {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buscar-usuarios input {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+  max-width: 100%;
+}
+
+/* Tabla de usuarios */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tabla-usuarios thead {
+  background-color: #006341;
+  color: white;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.tabla-usuarios tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.tabla-usuarios td:last-child {
+  text-align: center;
+}
+
+/* Botones */
+.btn-editar,
+.btn-eliminar {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.btn-editar {
+  background-color: #039965;
+}
+
+.btn-editar:hover {
+  background-color: #006341;
+}
+
+.btn-eliminar {
+  background-color: #e53935;
+}
+
+.btn-eliminar:hover {
+  background-color: #c62828;
+}
+
+/* Modal para edición */
+.modal-usuario {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-usuario.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-usuario {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-content-usuario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content-usuario form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content-usuario input,
+.modal-content-usuario select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.modal-content-usuario .botones-modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-content-usuario .btn-guardar {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content-usuario .btn-cancelar {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .buscar-usuarios {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabla-usuarios th,
+  .tabla-usuarios td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .modal-content-usuario {
+    width: 95%;
+  }
+}
