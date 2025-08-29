@@ -1,0 +1,105 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Cards */
+.estadisticas {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  min-width: 250px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Colores personalizados */
+.card.ventas i, .card.ventas p { color: #006341; }
+.card.usuarios i, .card.usuarios p { color: #4da6ff; }
+.card.ingresos i, .card.ingresos p { color: #f4b400; }
+
+/* Gráficas */
+.graficas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.graficas canvas {
+  width: 100% !important;
+  height: 360px !important;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Tabla */
+#tabla-notificaciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#tabla-notificaciones th, #tabla-notificaciones td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+#tabla-notificaciones th {
+  background-color: #006341;
+  color: white;
+}
+
+#tabla-notificaciones tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+#tabla-notificaciones tr:hover {
+  background: #e8f5e9;
+}

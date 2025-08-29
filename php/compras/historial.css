@@ -1,0 +1,85 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.compras-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.tabla-compras {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-compras th, .tabla-compras td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-compras th {
+    background: #006341;
+    color: white;
+}
+
+.tabla-compras tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.btn-factura {
+    background: #28a745;
+    color: white;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-factura:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.mensaje-vacio {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+.boton-regresar {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.boton-regresar a {
+    display: inline-block;
+    background: #047a51;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton-regresar a:hover {
+    background: #006341;
+    transform: scale(1.05);
+}
