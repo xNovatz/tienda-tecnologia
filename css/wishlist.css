@@ -1,0 +1,212 @@
+/* ===================================================== */
+/* Página de Favoritos (wishlist.php)                    */
+/* ===================================================== */
+
+/* Contenedor principal */
+.wishlist-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Layout */
+.wishlist-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Card título */
+.wishlist-titulo-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.wishlist-titulo-card h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #006341;
+  margin: 0;
+}
+
+/* Grid de favoritos */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card de cada producto favorito */
+.wishlist-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen */
+.wishlist-imagen img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Info */
+.wishlist-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.wishlist-descripcion {
+  font-size: 14px;
+  color: #555;
+  max-height: 60px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Precio */
+.wishlist-precio {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.wishlist-precio .tachado {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.wishlist-precio .oferta {
+  color: #e63946;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Botones */
+.wishlist-botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botón agregar al carrito */
+.btn-agregar {
+  background-color: #004d29;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #007a47;
+  transform: scale(1.05);
+}
+
+/* Botón quitar de favoritos */
+.btn-favorito-remove {
+  background-color: #eee;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-favorito-remove:hover {
+  background-color: #e63946;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Mensaje vacío */
+.wishlist-vacio {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Scroll en descripción */
+.wishlist-descripcion::-webkit-scrollbar {
+  width: 4px;
+}
+.wishlist-descripcion::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* =============================== */
+/* Toast notification              */
+/* =============================== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  min-width: 250px;
+  max-width: 320px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success { background-color: #2e7d32; }   /* Verde */
+.toast.error   { background-color: #c62828; }   /* Rojo */
+.toast.info    { background-color: #1565c0; }   /* Azul */
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wishlist-card {
+    padding: 15px;
+  }
+
+  .wishlist-info h2 {
+    font-size: 18px;
+  }
+
+  .wishlist-precio {
+    font-size: 16px;
+  }
+}

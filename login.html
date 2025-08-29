@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/usuarios.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</h2>
+    
+    <form id="formLogin" action="php/login.php" method="POST">
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="password" name="contraseña" id="clave" placeholder="Contraseña" required> 
+      <button type="submit">Entrar</button>
+      <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </form>
+  </div>
+
+  <!-- Validación personalizada -->
+  <script>
+    const clave = document.getElementById("clave");
+
+    // Validación de longitud mínima
+    clave.addEventListener("input", function () {
+      clave.setCustomValidity(""); // limpia errores anteriores
+      if (clave.value.length > 0 && clave.value.length < 4) {
+        clave.setCustomValidity("La contraseña debe tener al menos 4 caracteres.");
+      }
+    });
+
+    // Mostrar error si viene de login.php con ?error=incorrecta
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+
+    if (error === "incorrecta") {
+      clave.setCustomValidity("Usuario o contraseña incorrectos.");
+      clave.reportValidity();
+
+      // Limpia el mensaje en cuanto empiece a escribir
+      clave.addEventListener("input", () => clave.setCustomValidity(""));
+
+      // Elimina el parámetro de la URL sin recargar
+      if (window.history.replaceState) {
+        const cleanUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+      }
+    }
+
+    if (error === "confirmar") {
+      document.body.insertAdjacentHTML("beforeend", `
+        <div class="toast mostrar">
+          <i class="fa-solid fa-triangle-exclamation"></i> Debes confirmar tu cuenta desde el correo electrónico antes de iniciar sesión.
+          <br>
+          <a href="php/usuarios/reenviar_confirmacion.php?correo=${encodeURIComponent(new URLSearchParams(window.location.search).get("correo"))}" 
+            style="color:#4da6ff; text-decoration:underline; font-size:13px;">
+            Reenviar correo de confirmación
+          </a>
+        </div>
+      `);
+      setTimeout(() => {
+        const toast = document.querySelector(".toast");
+        if (toast) toast.remove();
+      }, 6000);
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Este CSS es utilizado en: index.php, mi-cuenta.php */
+.menu-categorias {
+  position: relative; /* clave para que el ul se posicione respecto a este div */
+  display: inline-block;
+  z-index: 10; /* asegura que esté por encima */
+}
+
+.lista-categorias {
+  position: absolute; /* se sobrepone en lugar de empujar */
+  top: 100%; /* justo debajo del botón */
+  left: 0;
+  background-color: white;
+  border: 2px solid #03a678;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 200px;
+  display: none; /* oculto por defecto */
+  z-index: 999; /* muy por encima de todo */
+}
+
+.lista-categorias li {
+  padding: 8px 20px;
+}
+
+.lista-categorias li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.lista-categorias li:hover {
+  background-color: #f0f0f0;
+}

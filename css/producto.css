@@ -1,0 +1,289 @@
+/* ===================================================== */
+/* Página de Producto - SOLO se aplica en producto.php    */
+/* ===================================================== */
+
+/* Contenedor principal */
+.producto-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Layout general - ahora en columna (producto arriba, reseñas abajo) */
+.producto-layout {
+  display: flex;
+  flex-direction: column; /* 👈 reseñas debajo */
+  gap: 30px;
+}
+
+/* Card del producto */
+.producto-card {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Card de reseñas */
+.producto-reseñas-card {
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ------------------------------ */
+/* Detalle de producto (imagen + info) */
+.producto-detalle-box {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Imagen sin card */
+.producto-imagen img {
+  width: 350px;   /* 👈 más grande */
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: none; /* 👈 quitamos sombra */
+  border: none;     /* 👈 sin borde */
+}
+
+/* Info del producto */
+.producto-info {
+  flex: 1;
+}
+
+.producto-info h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.producto-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.producto-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.producto-info a:hover {
+  color: #006341;
+}
+
+/* Precio */
+.producto-precio {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #006341;
+}
+
+.producto-precio .tachado {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.producto-precio .oferta {
+  color: #e63946;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Botones */
+.producto-botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-agregar,
+.btn-favorito {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-agregar {
+  background-color: #004d29;
+  color: white;
+}
+
+.btn-agregar:hover {
+  background-color: #007a47;
+  transform: scale(1.05);
+}
+
+.btn-favorito {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn-favorito:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/* Reseñas */
+.producto-reseñas-card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.producto-reseña-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.producto-reseña-form button {
+  background-color: #006341;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.producto-reseña-form button:hover {
+  background-color: #007a47;
+}
+
+.producto-lista-reseñas {
+  margin-top: 20px;
+}
+
+.producto-reseña {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid #006341;
+}
+
+.producto-reseña strong {
+  color: #006341;
+}
+
+.promedio-estrellas {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f5a623;
+}
+
+.form-reseña {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-reseña select,
+.form-reseña textarea,
+.form-reseña button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-reseña textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-reseña button {
+  background-color: #006341;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: fit-content;
+}
+
+.form-reseña button:hover {
+  background-color: #007a47;
+  transform: scale(1.05);
+}
+
+#lista-reseñas p {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+#lista-reseñas b {
+  color: #333;
+}
+
+/* =============================== */
+/* Toast notification              */
+/* =============================== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  min-width: 250px;
+  max-width: 320px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.success { background-color: #2e7d32; }   /* Verde */
+.toast.error   { background-color: #c62828; }   /* Rojo */
+.toast.info    { background-color: #1565c0; }   /* Azul */
+
+/* ------------------------------ */
+/* Responsive */
+@media (max-width: 992px) {
+  .producto-detalle-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .producto-imagen img {
+    max-width: 90%;
+  }
+  .producto-botones {
+    justify-content: center;
+  }
+}

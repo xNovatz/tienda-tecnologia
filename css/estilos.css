@@ -1,0 +1,768 @@
+/* Este CSS es utilizado en: index.php, gabinetes.php, graphic.php, laptops.php, mi-cuenta.php, monitores.php, mouse.php, procesadores.php, rams.php */
+/* ---------------------------------- */
+/* Diseño general del body */
+/* ---------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ---------------------------------- */
+/* Diseño del topbar */
+/* ---------------------------------- */
+.top-bar {
+  background-color: #006341;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.top-bar .cuenta-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ---------------------------------- */
+/* Diseño del header principal */
+/* ---------------------------------- */
+.main-header {
+  background-color: white;
+  padding: 1px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sub-header {
+  background-color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-top: 2px solid #ddd;
+
+  /* Línea separadora arriba para separación visual */
+  border-top: 1px solid #eeeeee; /* línea fina */
+  margin-top: 0px; /* espacio extra entre headers */
+
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  margin-bottom: 60px;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  text-decoration: none;
+  color: black; /* o el color que prefieras */
+  font-size: 2em;
+}
+
+.logo h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+}
+
+.logo span {
+  color: #006341;
+}
+
+.iconos-header a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+/* ---------------------------------- */
+/* Diseño de la sección principal (hero-section) */
+/* ---------------------------------- */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.menu-categorias {
+  margin-bottom: 10px;
+}
+
+.btn-categorias {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #006341;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------------------------------- */
+/* Diseño del banner principal */
+/* ---------------------------------- */
+.contenedor-promociones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.banner-principal {
+  background: linear-gradient(90deg, #480048, #c04848);
+  color: white;
+  padding: 20px;
+  flex: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  height: 440px; /* Fija la altura del banner */
+  overflow: hidden; /* Asegura que nada se salga */
+  margin: 0 auto;
+}
+
+.banner-principal img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain; /* Evita recorte y mantiene proporciones */
+  flex-shrink: 1; /* Evita que la imagen haga crecer el contenedor */
+}
+
+
+.texto-banner {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto-banner h4 {
+  color: yellow;
+  margin: 0;
+}
+
+.texto-banner h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.texto-banner h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.texto-banner span {
+  font-weight: bold;
+}
+
+.btn-banner {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.producto-link {
+  text-decoration: none;
+  color: inherit; /* mantiene el color del texto original */
+  display: block;
+}
+
+/* ---------------------------------- */
+/* productos destacados */
+/* ---------------------------------- */
+.productos-destacados {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.producto {
+  background: linear-gradient(90deg, #6a0572, #ab83a1);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+.producto img {
+  width: 250px;
+}
+
+.producto .info h4 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+.producto .info h3 {
+  font-size: 15px;
+  margin: 10px 0;
+}
+.producto .info h2 {
+  font-size: 5px;
+  margin: 10px 0;
+}
+
+
+/* ---------------------------------- */
+/* galería redonda de categorías */
+/* ---------------------------------- */
+.galeria-redonda {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px 10px;
+  background-color: #f5f5f5;
+}
+
+.item-redondo {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.item-redondo:hover {
+  transform: scale(1.1);
+}
+
+.item-redondo img {
+  width: 60%;
+  height: auto;
+}
+
+/* ---------------------------------- */
+/* sección de productos en oferta y destacados */
+/* ---------------------------------- */
+.featured-section {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* oferta especial lateral */
+.special-offer {
+  width: 30%;
+  background: radial-gradient(circle, #0a4d18, #002c08);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.special-offer img {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.special-offer .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* productos destacados grid */
+.featured-products {
+  width: 70%;
+}
+
+.featured-products h2 {
+  margin-bottom: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  background: white;
+  flex-direction: column;
+  padding: 15px;
+  height: 95%;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contenido-inferior {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.descripcion-producto {
+  max-height: 80px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.descripcion-producto::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.product-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px;
+}
+
+.product-card .stars {
+  color: gold;
+  font-size: 1rem;
+}
+
+.product-card .price {
+  margin: 10px 0;
+}
+
+.product-card del {
+  color: gray;
+  margin-right: 5px;
+}
+
+.product-card button {
+  background-color: #004d29;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card button:hover {
+  background-color: #007a47; /* tono más claro al hacer hover */
+  transform: scale(1.05);    /* efecto de agrandamiento sutil */
+}
+
+
+.product-card h2 {
+  margin-bottom: 10px;
+}
+
+/* ---------------------------------- */
+/* sección de características adicionales */
+/* ---------------------------------- */
+.features-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section .section-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ---------------------------------- */
+/* productos recomendados */
+/* ---------------------------------- */
+
+.caja-titulo-recomendados {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: 0 0 10px; /* elimina auto para que ocupe 100% */
+  width: auto; /* asegúrate de que ocupe todo el ancho del contenedor */
+}
+
+.caja-titulo-recomendados h2 {
+  margin: 0;
+  font-size: auto;
+}
+
+.recomended-section {
+  display: flex;
+  gap: 10px;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.recomended-products {
+  width: 100%;
+}
+
+/* ---------------------------------- */
+/* pie de pagina */
+/* ---------------------------------- */
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 20px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0.8);
+  transition: filter 0.3s;
+}
+
+.social-links img:hover {
+  filter: brightness(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  color: #888;
+}
+
+
+/* ---------------------------------- */
+/* Porque elegirnos */
+/* ---------------------------------- */
+
+.features-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section .section-title {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ---------------------------------- /
+/ Diseño del boton chat /
+/ ---------------------------------- */
+#chat-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-family: sans-serif;
+}
+
+#chat-toggle {
+  background-color: #006341;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#chat-box {
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#chat-box.hidden {
+  display: none;
+}
+
+#chat-header {
+  background-color: #006341;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#chat-content {
+  padding: 10px;
+  height: 150px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chat-input {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* ---------------------------------- /
+/ Diseño del ⚙ Administrar /
+/ ---------------------------------- */
+
+.dropdown-admin {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-admin:hover .dropdown-content {
+  display: block;
+}
+
+
+/* ----------------- Buscador ---------------- */
+
+/* Contenedor buscador en el header */
+.buscador-header {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Input y botón */
+.buscador-header form {
+  display: flex;
+  width: 100%;
+}
+
+.buscador-header input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.buscador-header button {
+  background: #006400;
+  color: #fff;
+  border: none;
+  padding: 0 15px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.buscador-header button:hover {
+  background: #004d00;
+}
+
+/* Resultados flotantes */
+.buscador-resultados {
+  position: absolute;
+  top: 100%;   /* justo debajo del input */
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: none;
+}
+
+/* Cada resultado */
+.buscador-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buscador-item:hover {
+  background: #f5f5f5;
+}
+
+.buscador-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.sin-resultados {
+  padding: 10px;
+  color: #888;
+  text-align: center;
+}

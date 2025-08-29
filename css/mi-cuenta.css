@@ -1,0 +1,234 @@
+/* Este CSS es utilizado en: mi-cuenta.php */
+.cuenta-container {
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.cuenta-info {
+  flex: 2;
+  font-size: 16px;
+}
+
+.cuenta-info p {
+  margin-bottom: 15px;
+}
+
+.cuenta-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cuenta-actions button {
+  padding: 12px;
+  font-weight: bold;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cuenta-actions button:hover {
+  background-color: #1558b0;
+  transform: scale(1.05);
+}
+
+.cuenta-actions button:last-child {
+  background-color: #999;
+}
+
+.cuenta-actions button:last-child:hover {
+  background-color: #777;
+  transform: scale(1.05);
+}
+
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content textarea,
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Modal exclusivo para mi cuenta */
+.modal-actualizar {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-actualizar.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-actualizar {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-content-actualizar h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content-actualizar form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content-actualizar input,
+.modal-content-actualizar textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.botones-modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-guardar {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sub-header {
+  position: relative; /* Asegura que respete su stacking context */
+  z-index: 10;
+}
+
+.modal-actualizar {
+  z-index: 1000; /* Más alto que cualquier header */
+}
+
+.modal-content-actualizar label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* ---- Cambiar Contraseña -------- */
+
+.modal-password {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-password.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-password {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-family: 'Inter', sans-serif;
+}
+
+.modal-content-password form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content-password input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.modal-content-password label {
+  font-weight: bold;
+}

@@ -1,0 +1,207 @@
+/* Este CSS es utilizado en: gabinetes.php, graphic.php, laptops.php, monitores.php, mouse.php, procesadores.php, rams.php */
+/* ---------------------------------- */
+/* Diseño general del body */
+/* ---------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* ---------------------------------- */
+/* Encabezado principal */
+/* ---------------------------------- */
+.header {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------------------------------- */
+/* Contenedor general de la página */
+/* ---------------------------------- */
+.contenedor {
+  display: flex;
+  padding: 20px;
+}
+
+/* ---------------------------------- */
+/* Barra lateral (categorías o menú) */
+/* ---------------------------------- */
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  margin-right: 20px;
+  max-height: 600px; /* o la altura que tú desees */
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* ---------------------------------- */
+/* Detalle del producto */
+/* ---------------------------------- */
+.producto-detalle {
+  display: flex;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  height: 320px; /* Altura fija */
+  overflow: hidden; /* Evita que crezca por contenido */
+}
+
+.producto-imagen {
+  flex: 0 0 280px; /* Ancho fijo del contenedor de imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.producto-imagen img {
+  max-width: 100%;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* ajusta sin recortar */
+  border-radius: 10px;
+}
+
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%; /* o una altura específica si prefieres */
+}
+
+.producto-info h2 {
+  margin-top: 0;
+}
+
+.precio-boton {
+  margin-top: auto; /* empuja hacia abajo */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---------------------------------- */
+/* Scroll solo para la descripción larga */
+/* ---------------------------------- */
+.descripcion-scroll {
+  max-height: 100px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: none;
+  word-wrap: break-word; 
+}
+
+/* Oculta scrollbar visual en navegadores Webkit */
+.descripcion-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* Botón de agregar al carrito */
+/* ---------------------------------- */
+.btn-agregar {
+  padding: 10px 20px;
+  background-color: #018658;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;       
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #006341;
+  transform: scale(1.05);
+}
+
+
+/* ---------------------------------- */
+/* Listado de productos (columna) */
+/* ---------------------------------- */
+.productos-listado {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre productos */
+  flex: 1;
+}
+
+/* ---------------------------------- */
+/* Enlaces dentro de listas */
+/* ---------------------------------- */
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------------------------------- */
+/* Logo de marca */
+/* ---------------------------------- */
+.titulo-con-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* separa el texto de la imagen */
+  font-size: 1.4rem;
+}
+
+.logo-marca {
+  height: 40px;
+  padding: 0px;
+  background-color: #e0e0e0; /* gris claro */
+  border-radius: 8px; /* esquinas curvas */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ✨ Efecto hover: agrandar y hacer más opaco al pasar el mouse */
+.logo-marca:hover {
+  transform: scale(1.2); /* agranda un 20% */
+}
+
+
+/* ---------------------------------- */
+/*  card con alertar descuento
+/* ---------------------------------- */
+
+.card-alerta {
+  display: flex;
+  border: 3px solid red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 320px; /* Altura fija */
+  overflow: hidden; /* Evita que crezca por contenido */
+}
